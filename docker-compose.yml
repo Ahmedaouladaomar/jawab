@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14.2
+    restart: always
+    environment:
+      POSTGRES_USER: jawab
+      POSTGRES_PASSWORD: jawab
+      POSTGRES_DB: jawab
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+
+  nxginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: "./nginx"
+    ports:
+      - "3050:80"
+
+  api:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: './api'
+    depends_on:
+      postgres:
+        condition: service_started
+    volumes:
+      - /api/node_modules
+      - ./api:/api
+    ports:
+      - '3000:3000'
+
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: "./client"
+    depends_on:
+      - api
+    volumes:
+      - /client/node_modules
+      - ./client:/client
+    ports:
+      - "5173:5173"
+
+volumes:
+  pg_data:

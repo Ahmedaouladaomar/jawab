@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: var(--mantine-spacing-md);
+    box-shadow: var(--mantine-shadow-xs);
+
+    .link {
+        border-radius: 5px;
+    }
+    .cta {
+        background-color: white;
+        color: black;
+        &:hover {
+            background-color: whitesmoke;
+        }
+    }
+    .burger {
+        display: none;
+        width: fit-content;
+        padding: 0;
+    }
+    /* Mobile breakpoint */
+    @media (max-width: $mobile) {
+        .center, .cta {
+            display: none;
+        }
+        .burger {
+            display: block;
+        }
+    }
+}

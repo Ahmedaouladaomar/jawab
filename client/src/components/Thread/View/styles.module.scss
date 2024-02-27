@@ -1,0 +1,24 @@
+.thread {
+
+    .like {
+        background: none;
+        color: grey;
+        margin: 0;
+        padding: 0;
+    }
+
+    .action_button__container {
+        display: flex;
+    }
+
+    @media (max-width: $mobile) {
+        .date, .owner, .posted, .divider, .like {
+            font-size: smaller;
+            padding: 0;
+        }
+
+        .like {
+            font-size: x-small;
+        }
+    }
+}

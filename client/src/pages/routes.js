@@ -1,0 +1,17 @@
+export const LOGIN = "/login";
+export const REGISTER = "/register";
+export const VERIFY_EMAIL = "/verifyEmail/:id/:code";
+export const VERIFICATION = "/verification/:id";
+export const REGENERATE_CODE = "/regenerateVerification/:id";
+export const LOGOUT = "/logout";
+export const IS_AUTHENTICATED = "/auth";
+export const HOME = "/home";
+export const PROFILE = "/profile/:username";
+export const USERS = "/users";
+export const USER = "/users/profile/:username";
+export const USER_UPDATE = "/users/:id";
+export const THREADS = "/threads";
+export const THREAD = "/threads/:id";
+export const COMMENTS = "/threads/:id/comments";
+export const COMMENT = "/threads/comments/:id";
+export const CHATS = "/chats";

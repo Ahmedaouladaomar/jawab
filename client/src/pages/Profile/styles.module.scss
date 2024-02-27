@@ -1,0 +1,19 @@
+.card {
+    width: 60%;
+    margin: auto;
+    display: block;
+    /* Error notification */
+    .close_error {
+        width: fit-content;
+        border-radius: 5px;
+    }
+    /* Success notification */
+    .close_success {
+        width: fit-content;
+        border-radius: 5px;
+    }
+    /* Mobile version */
+    @media (max-width: $mobile) {
+        width: 80%;
+    }
+}
