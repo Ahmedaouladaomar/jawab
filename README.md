@@ -24,6 +24,7 @@ If you want to run the project locally please follow these commands to run api (
 cd api
 cp env.example .env
 npm install
+npx typeorm-ts-node-esm migration:run -d src/config/data-source.ts
 npm run start:dev
 ```
 
