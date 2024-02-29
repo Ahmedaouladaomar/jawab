@@ -5,10 +5,12 @@ Jawab is a web application in which you can post your questions and wait for peo
 
 This project was built with the following technologies:
 - NestJS
+- TypeORM
 - Postgresql
 - ReactJS
 - MantineUI
 - Docker
+- Nginx
 
 Programming language: 
 - JavaScript
